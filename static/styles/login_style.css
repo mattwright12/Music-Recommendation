@@ -1,0 +1,181 @@
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7vh;
+  padding-left: 3%;
+  color: #f6f7f9;
+}
+
+body{
+  background-color: #323a45;
+}
+
+#not_logged_in {
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f7f9;
+  /*box-shadow: 5px 10px #7b7c7d;*/
+  color: #323a45;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  text-align: center;
+}
+
+#intro_labels{
+  margin-top: 20%
+}
+
+#logged_in {
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f7f9;
+  /*box-shadow: 5px 10px #7b7c7d;*/
+  color: #323a45;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  text-align: center;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
+}
+
+#login {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f7f9;
+  /*box-shadow: 5px 10px #7b7c7d;*/
+  color: #323a45;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#register {
+  width: 45%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f7f9;
+  /*box-shadow: 5px 10px #7b7c7d;*/
+  color: #323a45;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+a{
+  color: #323a45;
+}
+
+#password{
+    font-size: 3vh;
+    float: right;
+    margin-right: 10%;
+}
+
+#password_verification{
+    font-size: 3vh;
+    float: right;
+    margin-right: 10%;
+}
+
+
+#username{
+    font-size: 3vh;
+    float: right;
+    margin-right: 10%;
+}
+
+#email{
+    font-size: 3vh;
+    float: right;
+    margin-right: 10%;
+}
+
+.error{
+    color: #323a45;
+    font-size: 2vh;
+}
+
+
+
+input[type=submit]{
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f6f7f9;
+    border: 1px solid #323a45;
+    padding: 1%;
+
+}
+
+
+
+
+ /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  font-size: 2vh;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,155 @@
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7vh;
+  padding-left: 3%;
+  color: #f6f7f9;
+}
+
+body{
+  background-color: #323a45;
+  height: 100%;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  padding-left: 3%;
+  color: #5faeb6;
+
+}
+
+
+#toolbar{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  color: #f6f7f9;
+  background: #5faeb6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#toolbar a{
+  float: left;
+  display: block;
+  text-align: center;
+  font-size: 5vh;
+  padding: 1%;
+  text-decoration: none;
+  color: #f6f7f9;
+}
+
+#toolbar_tastes{
+  font-weight:900;
+  /*position: relative;*/
+  /*left:42%;*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#toolbar_profile{
+  font-weight:900;
+  /*position: absolute;*/
+  /*right: 3%;*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#toolbar_playlists{
+  font-weight:900;
+  /*position: absolute;*/
+  /*left: 3%;*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#toolbar a:hover {
+  color: #323a45;
+}
+
+
+
+
+
+
+
+
+
+
+table.greyGridTable {
+  padding-left: 3%;
+  border: 0px solid #eef3db;
+  width: auto;
+  border-radius: 0px;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vh;
+  color: #323a45;
+  justify-content: center;
+  border-radius: 10px;
+}
+table.greyGridTable td, table.greyGridTable th {
+  border: 0px solid #eef3db;
+  border-radius: 0px;
+  padding: 3px 4px;
+}
+table.greyGridTable tbody td {
+}
+table.greyGridTable tr:nth-child(even) {
+  background: #323a45;
+}
+
+table.greyGridTable tr:nth-child(odd) {
+  background: #323a45;
+}
+
+.contents {
+  color: #5faeb6;
+  font-size: 2.5vh;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+table.greyGridTable thead {
+  background: #323a45;
+  border-bottom: 10px solid #5faeb6;
+}
+table.greyGridTable thead th {
+  color: #789e9e;
+  text-align: center;
+  border-left: 2px solid #789e9e;
+}
+table.greyGridTable thead th:first-child {
+  border-left: none;
+}
+
+table.greyGridTable tfoot {
+  font-weight: bold;
+  color: #789e9e;
+  border-top: 4px solid #789e9e;
+}
+table.greyGridTable tfoot td {
+}
+
+#title{
+  font-size: 3vh;
+  overflow: hidden;
+  color: #f6f7f9;
+  text-align: left;
+}
+#preview_not_available{
+  font-size: 2vh;
+  color: #5faeb6;
+  overflow: hidden;
+}
+
+#artist{
+  font-size: 2vh;
+  color: #f6f7f9;
+  text-align: left;
+}

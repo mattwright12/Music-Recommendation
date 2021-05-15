@@ -1,0 +1,36 @@
+
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7vh;
+  padding-left: 3%;
+  color: #f6f7f9;
+  align-self: center;
+}
+
+
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  padding-left: 3%;
+  color: #5faeb6;
+  align-self: center;
+}
+
+body{
+  background-color: #323a45;
+  height: 100%;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  padding-left: 3%;
+  color: #f6f7f9;
+
+}
+
+a {
+  color: #5faeb6;
+}

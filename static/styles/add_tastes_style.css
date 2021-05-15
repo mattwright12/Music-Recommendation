@@ -1,0 +1,320 @@
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7vh;
+  padding-left: 3%;
+  color: #f6f7f9;
+}
+
+body{
+  background-color: #323a45;
+  height: 100%;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  padding-left: 3%;
+  color: #5faeb6;
+
+}
+
+#artist{
+  background-color: #323a45;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  border: 1px solid #f6f7f9;
+  padding: 0.3%;
+  padding-left: 0.5%;
+  color: #f6f7f9;
+  /*display:block;*/
+  margin: 3%;
+
+
+}
+
+#song{
+  background-color: #323a45;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  border: 1px solid #f6f7f9;
+  padding: 0.3%;
+  padding-left: 0.5%;
+  color: #f6f7f9;
+  /*display:block;*/
+  margin: 3%;
+
+
+}
+
+#descriptor{
+  background-color: #323a45;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  border: 1px solid #f6f7f9;
+  padding: 0.3%;
+  padding-left: 0.5%;
+  color: #f6f7f9;
+  /*display:block;*/
+  margin: 3%;
+
+
+}
+
+#toolbar{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  color: #f6f7f9;
+  background: #5faeb6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#toolbar a{
+  float: left;
+  display: block;
+  text-align: center;
+  font-size: 5vh;
+  padding: 1%;
+  text-decoration: none;
+  color: #f6f7f9;
+}
+
+#toolbar_tastes{
+  font-weight:900;
+  /*position: relative;*/
+  /*left:42%;*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#toolbar_profile{
+  font-weight:900;
+  /*position: absolute;*/
+  /*right: 3%;*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#toolbar_playlists{
+  font-weight:900;
+  /*position: absolute;*/
+  /*left: 3%;*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#toolbar a:hover {
+  color: #323a45;
+}
+
+#submit{
+  background-color: #323a45;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  border: 1px solid #f6f7f9;
+  padding: 0.3%;
+  padding-left: 0.5%;
+  color: #f6f7f9;
+  /*display:block;*/
+  margin: 3%;
+}
+
+#submit:hover{
+  background-color: #f6f7f9;
+  border: 1px solid #323a45;
+  color: #323a45;
+}
+
+
+
+
+
+
+#tables{
+}
+
+#artist_table {
+  border: 0px solid #eef3db;
+  width: auto;
+  border-radius: 0px;
+  color: #f6f7f9;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  padding-left: 2%;
+  margin: 0%;
+  display: inline-table;
+}
+
+#artist_table td, #artist_table th {
+  border: 0px solid #eef3db;
+  border-radius: 0px;
+  padding: 1vh 1vh;
+}
+
+
+#track_table {
+  border: 0px solid #eef3db;
+  width: auto;
+  border-radius: 0px;
+  display: block;
+  color: #f6f7f9;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  padding-left: 3%;
+  margin: 0%;
+  display: inline-table;
+}
+
+#track_table td, #track_table th {
+  border: 0px solid #eef3db;
+  border-radius: 0px;
+  padding: 1vh 1vh;
+}
+
+
+
+
+.subtract{
+  border-radius: 50%;
+  /*border: 1px solid #f6f7f9;*/
+  border: none;
+  font-size: 3.5vh;
+  align-self: center;
+  background-color: #323a45;
+  color: #5faeb6;
+}
+
+.subtract:hover{
+  background-color: #5faeb6;
+  color: #323a45;
+  /*border: 1px solid #323a45;*/
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+ background-color: #f6f7f9;
+ margin: 5% auto; /* 15% from the top and centered */
+ padding: 20px;
+ border: 0px solid #888;
+ width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+ color: #aaa;
+ float: right;
+ font-size: 28px;
+ font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+ color: black;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+table.greyGridTable {
+  border: 0px solid #eef3db;
+  width: auto;
+  border-radius: 0px;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vh;
+  color: #323a45;
+  justify-content: center;
+}
+table.greyGridTable td, table.greyGridTable th {
+  border: 0px solid #eef3db;
+  border-radius: 0px;
+  padding: 3px 4px;
+}
+table.greyGridTable tbody td {
+}
+table.greyGridTable td:nth-child(even) {
+  background: #f6f7f9;
+}
+table.greyGridTable thead {
+  background: #f6f7f9;
+  border-bottom: 10px solid #5faeb6;
+}
+table.greyGridTable thead th {
+  color: #789e9e;
+  text-align: center;
+  border-left: 2px solid #789e9e;
+}
+table.greyGridTable thead th:first-child {
+  border-left: none;
+}
+
+table.greyGridTable tfoot {
+  font-weight: bold;
+  color: #789e9e;
+  border-top: 4px solid #789e9e;
+}
+table.greyGridTable tfoot td {
+}
+
+
+
+
+
+
+
+
+.add{
+  border-radius: 50%;
+  border: 1px solid #f6f7f9;
+  font-size: 4vh;
+  align-self: center;
+  background-color: #323a45;
+  color: #f6f7f9;
+}
+
+.add:hover{
+  background-color: #f6f7f9;
+  color: #323a45;
+  border: 1px solid #323a45;
+}
+
+
