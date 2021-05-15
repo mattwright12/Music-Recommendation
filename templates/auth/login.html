@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Log In{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div id="login">
+  <form method="post">
+
+      <h3>Login</h3>
+
+    {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }} </p>
+    {% endif %}
+
+    <div class="tooltip">
+    <label for="username">Username</label>
+      <span class="tooltiptext">Enter your username</span>
+    </div>
+
+    <input name="username" id="username" required>
+
+
+      <p></p>
+
+    <div class="tooltip">
+    <label for="password">Password</label>
+      <span class="tooltiptext">Enter your password</span>
+    </div>
+
+    <input type="password" name="password" id="password" required>
+
+      <p></p>
+
+    <input type="submit" value="Log In">
+
+  </form>
+
+  <h6>Haven't registered yet? Click <a href="{{ url_for('auth.register') }}">here</a>!</h6>
+</div>
+{% endblock %}

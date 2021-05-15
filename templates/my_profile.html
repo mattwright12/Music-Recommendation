@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/my_profile_style.css') }}">
+
+
+
+  <title>My Profile</title>
+</head>
+<body>
+  <h1>My Profile</h1>
+  <p>Username: {{ username }}</p>
+  <a href='/change_password' id="change_password">Change password</a>
+  <br>
+  <br>
+  <a href='/' id="logout">Logout</a>
+
+
+  <div id='toolbar'>
+    <a id='toolbar_playlists' href='/my_playlists'>My Playlists</a>
+    <a id='toolbar_tastes' href='/add_tastes'>Add Tastes</a>
+    <a id='toolbar_profile' href='/my_profile'>My Profile</a>
+  </div>
+
+
+
+
+
+</body>
+</html>

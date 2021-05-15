@@ -1,0 +1,72 @@
+<!doctype html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/playlist_style.css') }}">
+
+
+  <title>{{ playlist_title }}</title>
+</head>
+<body>
+  <h1>{{ playlist_title }}</h1>
+
+  {% if playlist_items %}
+     <table class="greyGridTable">
+         {% for item in playlist_items %}
+    <tr>
+
+        {% if item[1] %}
+            <td> <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src={{ item[1] }} width="60" height="60" id='cover_art'></td>
+        {% else %}
+            <td> <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="{{url_for('static', filename='images/no_image_available.png')}}" width="60" height="60" id='cover_art'></td>
+        {% endif %}
+
+        {% if item[0] %}
+        <td id="title">{{ item[0][:25] }}</td>
+        {% else %}
+        <td></td>
+        {% endif %}
+
+        {% if item[2] %}
+         <td id="artist">{{ item[2] }}</td>
+        {% else %}
+        <td></td>
+        {% endif %}
+
+
+        {% if item[3] %}
+         <td><audio controls>
+         <source  src= {{ item[3] }} />
+         </audio></td>
+        {% else %}
+        <td id="preview_not_available">Preview not available</td>
+        {% endif %}
+</tr>
+         {% endfor %}
+         {% endif %}
+
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+         <tr><td></td></tr>
+     </table>
+
+  <div id='toolbar'>
+    <a id='toolbar_playlists' href='/my_playlists'>My Playlists</a>
+    <a id='toolbar_tastes' href='/add_tastes'>Add Tastes</a>
+    <a id='toolbar_profile'>My Profile</a>
+  </div>
+
+</body>
+</html>

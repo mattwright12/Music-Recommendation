@@ -1,0 +1,163 @@
+<!doctype html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/add_tastes_style.css') }}">
+
+    <style>
+        .modal {
+            display: {{ display_boolean }};
+        }
+    </style>
+
+
+  <title>Search the Database</title>
+</head>
+<body>
+  <h1>Search the Database</h1>
+  <p>To create a listener profile, simply enter artists, songs, and descriptors you like below.</p>
+  <p>Try to create different Listener Profiles for your different tastes, e.g. one for 1960s rock, another for classical, as it will improve the recommendations you get.</p>
+
+  <form method="POST" id='form'>
+      <input name="artist" name='artist' id='artist' placeholder="Artist...">
+      <input name="song" name='song' id='song' placeholder="Song...">
+      <input name="descriptor" id='descriptor' placeholder="Descriptor...">
+      <input type="submit" value="Search" id='submit'>
+  </form>
+
+  <div id="tables">
+
+    {% if artists %}
+    <table id="artist_table">
+        {% for artist in artists %}
+      <tr>
+          <td>
+          <a href='/add_tastes/delete/artist/{{ loop.index-1 }}'>
+           <button class="subtract" id={{ 'delete_artist{}'.format(loop.index) }}>X</button>
+           </a>
+          <td>{{ artist }}</td>
+      </tr>
+        {% endfor %}
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+  </table>
+    {% endif %}
+
+
+    {% if tracks %}
+    <table id="track_table">
+        {% for track in tracks %}
+      <tr>
+          <td>
+          <a href='/add_tastes/delete/track/{{ loop.index-1 }}'>
+           <button class="subtract" id={{ 'delete_track{}'.format(loop.index) }}>X</button>
+           </a>
+          </td>
+          <td>{{ track }}</td>
+      </tr>
+        {% endfor %}
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+  </table>
+    {% endif %}
+
+      </div>
+
+  <div id='toolbar'>
+    <a id='toolbar_playlists' href='/my_playlists'>My Playlists</a>
+    <a id='toolbar_tastes' href='/add_tastes'>Add Tastes</a>
+    <a id='toolbar_profile' href='/my_profile'>My Profile</a>
+  </div>
+
+
+
+{% if connection_error %}
+  <script>alert('Oh dear, we have had a bit of trouble connecting. Please try again!')</script>
+  {% endif %}
+
+
+  <!-- Trigger/Open The Modal -->
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+
+
+
+   <!-- Modal content -->
+   <div class="modal-content">
+       <a href='/add_tastes'>
+            <input type="button" class="close"></input>
+       </a>
+
+       {% if results and not error %}
+       {% set count = 0 %}
+     <table class="greyGridTable">
+
+
+         {% for result in results %}
+
+
+<tr>
+
+        {% if result[4] %}
+         <td>  <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src={{ result[4] }} width="100" height="100" id='cover_art'></td>
+        {% else %}
+    <td>  <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="{{url_for('static', filename='images/no_image_available.png')}}" width="100" height="100" id='cover_art'></td>
+        {% endif %}
+
+        {% if result[0] %}
+        <td>{{ result[0] }}</td>
+        {% endif %}
+
+        {% if result[1] %}
+         <td>{{ result[1] }}</td>
+        {% endif %}
+
+        {% if result[2] %}
+         <td>{{ result[2] }}</td>
+        {% endif %}
+
+        {% if result[3] %}
+         <td><audio controls>
+         <source  src= {{ result[3] }} />
+       </audio></td>
+        {% endif %}
+       <td>
+           <a href='/add_tastes/{{ loop.index-1 }}'>
+           <button class="add" id={{ 'button{}'.format(loop.index) }}>+</button>
+           </a>
+       </td>
+
+        <td>
+            <a href="{{ 'https://open.spotify.com/search/' + result[0] }}" target="_blank">
+                <img src="{{url_for('static', filename='images/spotify-logo.png')}}" alt="Spotify Logo" width="50" height="50">
+            </a>
+        </td>
+</tr>
+         {% endfor %}
+
+         {% else %}
+
+         <p>We searched far; we searched wide, but alas! we searched fruitlessly.</p>
+         <p> Check your spelling and try again! </p>
+
+         {% endif %}
+
+
+
+
+   </table>
+   </div>
+
+ </div>
+
+
+</body>
+</html>

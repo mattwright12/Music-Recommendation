@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/landing_page_style.css') }}">
+</head>
+<body>
+
+<h1>Welcome! Click here to <a href="{{ url_for('auth.login') }}">login</a> or <a href="{{ url_for('auth.register') }}">register</a>.</h1>
+
+<h2>The use of Spotify in this project</h2>
+
+<p>This project would not be possible without the use of the brilliant Spotify API. All previews, album art, and much of the data about the song used to make recommendations is from it. A big thanks to Spotify.</p>
+
+<a href="http://www.spotify.com" target="_blank">
+<img src="{{url_for('static', filename='images/spotify-logo.png')}}" alt="Spotify Logo" width="50" height="50" style="padding-left: 3%;">
+</a>
+
+</body>
+</html>

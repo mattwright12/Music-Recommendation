@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/search_page_style.css') }}">
+  <title>Search the Database</title>
+</head>
+<body>
+  <div id='center'>
+  <h1>Search the Database</h1>
+  <p></p>
+  <form method="POST" id='form'>
+    <input name="search" id='search' placeholder="Search..."><br></br>
+    <input type="submit" value="Search" id='submit'>
+  </form>
+  <p></p>
+  <p></p>
+  <p></p>
+{% block results %}{% endblock %}
+</div>
+</body>
+</html>

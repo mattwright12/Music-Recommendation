@@ -1,0 +1,29 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+<nav>
+  <h1><a href="{{ url_for('index') }}"></a></h1>
+  <ul>
+    {% if g.user %}
+    <div id="logged_in">
+      <li><span>{{ g.user['username'] }}</span>
+      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+    </li>
+    </div>
+    {% else %}
+    <div id="not_logged_in">
+      <p></p>
+      <p id="intro_labels">You are not <a href="{{ url_for('auth.login') }}">logged in</a> at the moment. Haven't registered yet? Click <a href="{{ url_for('auth.register') }}">here</a>!</p>
+    </div>
+    {% endif %}
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
